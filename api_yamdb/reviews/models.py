@@ -19,6 +19,7 @@ class Category(models.Model):
 
 
 class Genre(models.Model):
+    """Модель Genre."""
     name = models.CharField('Жанр', max_length=50)
     slug = models.SlugField('Слаг', unique=True)
 
