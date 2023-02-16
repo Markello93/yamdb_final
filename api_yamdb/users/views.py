@@ -11,8 +11,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 from api.permissions import AnonReadOnly, IsAdmin
 from users.models import User
-from users.serializers import (TokenSerializer, SignupSerializer,
-                               UserSerializer, ForUserSerializer)
+from users.serializers import (ForUserSerializer, SignupSerializer,
+                               TokenSerializer, UserSerializer)
 
 
 class APITokenView(generics.CreateAPIView):
