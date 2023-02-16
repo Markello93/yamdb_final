@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
-
 from users.models import User
 
 
@@ -23,7 +22,7 @@ class ValidateUsernameEmailMixin:
             raise ValidationError(
                 'Запрещено использовать "me" в качестве имени пользователя'
             )
-        elif User.objects.filter(username=value).exists():
+        if User.objects.filter(username=value).exists():
             raise serializers.ValidationError(
                 f'Данное имя {value} занято, используйте другое...'
             )

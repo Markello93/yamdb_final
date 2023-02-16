@@ -8,7 +8,6 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
-
 from api.permissions import AnonReadOnly, IsAdmin
 from users.models import User
 from users.serializers import (ForUserSerializer, SignupSerializer,
