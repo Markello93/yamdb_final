@@ -49,3 +49,5 @@ docker-compose exec web python manage.py load_data_from_csv
 ## Примеры
 Доступ к документации API представлен по ссылке:
 [http://127.0.0.1/redoc/](http://127.0.0.1/redoc/)
+
+![yamdb_workflow](https://github.com/Markello93/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
