@@ -1,15 +1,16 @@
 from api_yamdb.api.filters import FilterForTitle
-from api.mixins import CreateListDestroyViewSet
-from api.permissions import AdminModeratorAuthorOrReadOnly, AdminOrReaOnly
-from api.serializers import (CategorySerializer, CommentSerializer,
-                             GenreSerializer, ReviewSerializer,
-                             TitleCreateSerializer, TitleReadSerializer)
-from reviews.models import Category, Genre, Review, Title
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, viewsets
 from rest_framework.pagination import LimitOffsetPagination
+from reviews.models import Category, Genre, Review, Title
+
+from api.mixins import CreateListDestroyViewSet
+from api.permissions import AdminModeratorAuthorOrReadOnly, AdminOrReaOnly
+from api.serializers import (CategorySerializer, CommentSerializer,
+                             GenreSerializer, ReviewSerializer,
+                             TitleCreateSerializer, TitleReadSerializer)
 
 
 class CategoryViewSet(CreateListDestroyViewSet):
