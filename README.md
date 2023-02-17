@@ -8,10 +8,10 @@ View- функции реализованы с помощью вьюсетов, 
 
 ## Установка
 ```
-git clone https://github.com/Markello93/infra_sp2.git
+git clone https://github.com/Markello93/yamdb_final.git
 ```
 ```
-cd infra_sp2/infra
+cd yamdb_final/infra
 ```
 
 #### Создайте файл .env в директории infra/ и добавьте переменные окружения:
