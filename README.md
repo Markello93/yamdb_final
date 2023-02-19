@@ -6,6 +6,9 @@ Backend приложения YamDB.
 View- функции реализованы с помощью вьюсетов, аутентификация пользователей через JWT-токены.
 Проект собран в контейнеры с помощью функционала Docker.
 
+## Адрес сервиса
+Адрес сервиса: http://158.160.13.46/api/v1/
+
 ## Установка
 ```
 git clone https://github.com/Markello93/yamdb_final.git
@@ -14,7 +17,12 @@ git clone https://github.com/Markello93/yamdb_final.git
 cd yamdb_final/infra
 ```
 
-#### Создайте файл .env в директории infra/ и добавьте переменные окружения:
+#### Создайте файл .env в директории infra/
+```
+nano .env
+```
+
+#### Lобавьте переменные окружения:
 ```
 SECRET_KEY = 'Ваш секретный ключ django'
 EMAIL_HOST_USER = ваш email
@@ -35,19 +43,23 @@ docker compose up
 
 #### Выполните миграции:
 ```
-docker-compose exec web python manage.py migrate
+docker compose exec web python manage.py migrate
 ```
 #### Скопируйте файлы статики в контейнер:
 ```
-docker-compose exec web python manage.py collectstatic --no-input
+docker compose exec web python manage.py collectstatic --no-input
 ```
 #### Выполните импорт данных в базу данных (при необходимости):
 ```
-docker-compose exec web python manage.py load_data_from_csv
+docker compose exec web python manage.py load_data_from_csv
 ```
 
 ## Примеры
 Доступ к документации API представлен по ссылке:
 [http://158.160.13.46/redoc/](http://158.160.13.46/redoc/)
+
+Доступ к жанрам : [http://158.160.13.46/api/v1/genres/](http://158.160.13.46/api/v1/genres/])
+
+Доступ к категориям : [http://158.160.13.46/api/v1/categories/](http://158.160.13.46/api/v1/categories/)
 
 ![yamdb_workflow](https://github.com/Markello93/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
